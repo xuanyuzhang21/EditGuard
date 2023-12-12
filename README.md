@@ -11,4 +11,4 @@
 
 ![](./method-cross-v2_00.png)
 
-Inspired by recent developments in diffusion models, we propose a novel image steganography framework named **C**ontrollable, **Ro**bust, and **S**ecure Image **S**teganography (**CRoSS**). This framework offers significant advantages in **controllability** over container images, **robustness** against complex degradation during transmission of container images, and enhanced **security** compared to cover-based image steganography methods. Importantly, these benefits are achieved **without requiring additional training**.
+We propose a versatile proactive forensics framework **EditGuard**. The application scenario is shown on the left, wherein users embed invisible watermarks to their images via EditGuard in advance. If suffering tampering, users can defend their rights via the tampered areas and copyright information provided by EditGuard. Some supported tampering methods (marked in blue) and localization results of EditGuard are placed on the right. Our EditGuard can achieve over **95** localization precision and nearly **100\%** copyright accuracy.

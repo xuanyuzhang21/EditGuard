@@ -2,9 +2,9 @@
 <img src="./asserts/Logo.png" alt="Image Alt Text" width="150" height="150">
 <h3> EditGuard: Versatile Image Watermarking for Tamper Localization and Copyright Protection </h3>
   
-[Xuanyu Zhang](https://villa.jianzhang.tech/people/xuanyu-zhang-%E5%BC%A0%E8%BD%A9%E5%AE%87/)<sup>1</sup>, [Runyi Li](https://villa.jianzhang.tech/people/runyi-li-%E6%9D%8E%E6%B6%A6%E4%B8%80/)<sup>1</sup>, [Jiwen Yu](https://vvictoryuki.github.io/website/)<sup>1</sup>, [Youmin Xu](https://zirconium2159.github.io/)<sup>1, 2</sup>, [Weiqi Li](https://villa.jianzhang.tech/people/weiqi-li-%E6%9D%8E%E7%8E%AE%E7%90%A6/)<sup>1</sup>, [Jian Zhang](https://jianzhang.tech/)<sup>1</sup>
+[Xuanyu Zhang](https://villa.jianzhang.tech/people/xuanyu-zhang-%E5%BC%A0%E8%BD%A9%E5%AE%87/), [Runyi Li](https://villa.jianzhang.tech/people/runyi-li-%E6%9D%8E%E6%B6%A6%E4%B8%80/), [Jiwen Yu](https://vvictoryuki.github.io/website/), [Youmin Xu](https://zirconium2159.github.io/), [Weiqi Li](https://villa.jianzhang.tech/people/weiqi-li-%E6%9D%8E%E7%8E%AE%E7%90%A6/), [Jian Zhang](https://jianzhang.tech/)
 
-<sup>1</sup> Peking University, <sup>2</sup> PCL
+School of Electronic and Computer Engineering, Peking University
 
 </div>
 

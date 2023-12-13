@@ -7,7 +7,7 @@
 School of Electronic and Computer Engineering, Peking University
 
 [![arXiv](https://img.shields.io/badge/arXiv-<Coming_Soon>-<COLOR>.svg)](https://github.com/xuanyuzhang21/EditGuard)
-[![Home Page](https://img.shields.io/badge/Project_Page-<Gallery>-blue.svg)]([https://nvedit.github.io/](https://xuanyuzhang21.github.io/project/editguard/)
+[![Home Page](https://img.shields.io/badge/Project_Page-<Website>-blue.svg)](https://xuanyuzhang21.github.io/project/editguard/)
 
 </div>
 
@@ -16,3 +16,7 @@ School of Electronic and Computer Engineering, Peking University
 ![](./asserts/intro.png)
 
 We propose a versatile proactive forensics framework **EditGuard**. The application scenario is shown on the left, wherein users embed invisible watermarks to their images via EditGuard in advance. If suffering tampering, users can defend their rights via the tampered areas and copyright information provided by EditGuard. Some supported tampering methods (marked in blue) and localization results of EditGuard are placed on the right. Our EditGuard can achieve over **95\%** localization precision and nearly **100\%** copyright accuracy.
+
+## Code
+
+Our code is coming soon...

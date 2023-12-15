@@ -6,7 +6,7 @@
 
 School of Electronic and Computer Engineering, Peking University
 
-[![arXiv](https://img.shields.io/badge/arXiv-<Coming_Soon>-<COLOR>.svg)](https://github.com/xuanyuzhang21/EditGuard)
+[![arXiv](https://img.shields.io/badge/arXiv-<Coming_Soon>-<COLOR>.svg)](https://arxiv.org/pdf/2312.08883.pdf)
 [![Home Page](https://img.shields.io/badge/Project_Page-<Website>-blue.svg)](https://xuanyuzhang21.github.io/project/editguard/)
 
 </div>

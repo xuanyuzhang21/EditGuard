@@ -22,11 +22,11 @@ We propose a versatile proactive forensics framework **EditGuard**. The applicat
 Our code is coming soon...
 
 ## Bibtex
-'''
+```
 @misc{zhang2023editguard,
   author    = {Xuanyu Zhang and Runyi Li and Jiwen Yu and Youmin Xu and Weiqi Li and Jian Zhang},
   title     = {EditGuard: Versatile Image Watermarking for Tamper Localization and Copyright Protection},
   journal   = {arXiv preprint arxiv:2312.08883},
   year      = {2023},
 }
-'''
+```

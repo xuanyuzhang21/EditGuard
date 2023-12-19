@@ -17,6 +17,10 @@ School of Electronic and Computer Engineering, Peking University
 
 We propose a versatile proactive forensics framework **EditGuard**. The application scenario is shown on the left, wherein users embed invisible watermarks to their images via EditGuard in advance. If suffering tampering, users can defend their rights via the tampered areas and copyright information provided by EditGuard. Some supported tampering methods (marked in blue) and localization results of EditGuard are placed on the right. Our EditGuard can achieve over **95\%** localization precision and nearly **100\%** copyright accuracy.
 
+## Results
+
+![](./asserts/result.png)
+
 ## Code
 
 Our code is coming soon...

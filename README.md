@@ -25,6 +25,10 @@ We propose a versatile proactive forensics framework **EditGuard**. The applicat
 
 Our code is coming soon...
 
+## Contact us
+
+xuanyuzhang21@stu.pku.edu.cn
+
 ## Bibtex
 ```
 @article{zhang2023editguard,

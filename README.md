@@ -31,10 +31,10 @@ Our EditGuard can be easily modified and adapted to video tamper localization an
     <td colspan="2"><center>"a view of fireworks exploding in the night sky over a city, as seen from a plane"</center></td>
   </tr>
   <tr>
-    <td><img src="__assets__/gif/11.gif" alt="11ori"></td>
-    <td><img src="__assets__/gif/11_wm.gif" alt="11wm"></td>
-    <td><img src="__assets__/gif/11_tamper.gif" alt=""></td>
-    <td><img src="__assets__/gif/11_mask.gif" alt="Ours"></td>
+    <td><img src="assets/gif/11.gif" alt="11ori"></td>
+    <td><img src="assets/gif/11_wm.gif" alt="11wm"></td>
+    <td><img src="assets/gif/11_tamper.gif" alt=""></td>
+    <td><img src="assets/gif/11_mask.gif" alt="Ours"></td>
   </tr>
 
 </table>

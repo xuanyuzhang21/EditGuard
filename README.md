@@ -27,10 +27,10 @@ Our EditGuard can be easily modified and adapted to video tamper localization an
 
 <table>
   <tr>
-    <td colspan="1"><center>"Original Video"</center></td>
-    <td colspan="1"><center>"Watermarked Video"</center></td>
-    <td colspan="1"><center>"Tampered Video"</center></td>
-    <td colspan="1"><center>"Predicted Mask"</center></td>
+    <td colspan="1"><center>Original Video</center></td>
+    <td colspan="1"><center>Watermarked Video</center></td>
+    <td colspan="1"><center>Tampered Video</center></td>
+    <td colspan="1"><center>Predicted Mask</center></td>
   </tr>
   <tr>
     <td><img src="asserts/gif/11.gif" alt="11ori"></td>
@@ -38,6 +38,31 @@ Our EditGuard can be easily modified and adapted to video tamper localization an
     <td><img src="asserts/gif/11_tamper.gif" alt="11tamper"></td>
     <td><img src="asserts/gif/11_mask.gif" alt="11mask"></td>
   </tr>
+  <tr>
+    <td><img src="asserts/gif/13.gif" alt="13ori"></td>
+    <td><img src="asserts/gif/13_wm.gif" alt="13wm"></td>
+    <td><img src="asserts/gif/13_tamper.gif" alt="13tamper"></td>
+    <td><img src="asserts/gif/13_mask.gif" alt="13mask"></td>
+  </tr>
+  <tr>
+    <td><img src="asserts/gif/tennis.gif" alt="tennisori"></td>
+    <td><img src="asserts/gif/tennis_wm.gif" alt="tenniswm"></td>
+    <td><img src="asserts/gif/tennis_tamper.gif" alt="tennistamper"></td>
+    <td><img src="asserts/gif/tennis_mask.gif" alt="tennismask"></td>
+  </tr>
+  <tr>
+    <td><img src="asserts/gif/umbrella.gif" alt="umori"></td>
+    <td><img src="asserts/gif/umbrella_wm.gif" alt="umwm"></td>
+    <td><img src="asserts/gif/umbrella_tamper.gif" alt="umtamper"></td>
+    <td><img src="asserts/gif/umbrella_mask.gif" alt="ummask"></td>
+  </tr>
+  <tr>
+    <td><img src="asserts/gif/3.gif" alt="tennisori"></td>
+    <td><img src="asserts/gif/3_wm.gif" alt="tenniswm"></td>
+    <td><img src="asserts/gif/3_tamper.gif" alt="tennistamper"></td>
+    <td><img src="asserts/gif/3_mask.gif" alt="tennismask"></td>
+  </tr>
+  
 
 </table>
 

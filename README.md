@@ -19,6 +19,8 @@ We propose a versatile proactive forensics framework **EditGuard**. The applicat
 
 ## Results
 
+ Our EditGuard can pinpoint pixel-wise tampered areas under different AIGC-based editing methods.
+
 ![](./asserts/result.png)
 
 ## Extension

@@ -11,6 +11,9 @@ School of Electronic and Computer Engineering, Peking University
 
 </div>
 
+## News
+- **_News (2024-02-27)_**: 🎉🎉🎉 Congratulations on EditGuard being accepted by CVPR 2024! Our open-source project is making progress, stay tuned for updates!
+
 ## Introduction
 
 ![](./asserts/intro.png)

@@ -1,7 +1,6 @@
 <div align="center">
 <img src="./asserts/Logo.png" alt="Image Alt Text" width="150" height="150">
-<h3> EditGuard: Versatile Image Watermarking for Tamper Localization and Copyright Protection </h3>
-<h3> CVPR 2024 </h3>
+<h3> EditGuard: Versatile Image Watermarking for Tamper Localization and Copyright Protection \\ (CVPR 2024) </h3>
   
 [Xuanyu Zhang](https://xuanyuzhang21.github.io/), [Runyi Li](https://villa.jianzhang.tech/people/runyi-li-%E6%9D%8E%E6%B6%A6%E4%B8%80/), [Jiwen Yu](https://vvictoryuki.github.io/website/), [Youmin Xu](https://zirconium2159.github.io/), [Weiqi Li](https://villa.jianzhang.tech/people/weiqi-li-%E6%9D%8E%E7%8E%AE%E7%90%A6/), [Jian Zhang](https://jianzhang.tech/)
 

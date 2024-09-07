@@ -41,7 +41,7 @@ python maskextract.py --threshold 0.2
 ## Training
 Download the [COCO2017](http://images.cocodataset.org/zips/train2017.zip) dataset and modify the path of the training dataset in the config file.
 
-**Stage 1:** Train the BEM and BRM 
+**Stage 1:** Train the BEM and BRM. 
 ```
 python train_bit.py -opt options/train_editguard_bit.yml
 ```

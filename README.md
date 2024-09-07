@@ -28,7 +28,7 @@ python app.py
 ```
 
 ## Testing
-The testing dataset is placed in the "./dataset/valAGE-Set".
+Download the [testing dataset](https://drive.google.com/file/d/1s3HKFOzLokVplXV65Z6xcsBJ9qI91Qfv/view?usp=sharing) and place it in the "./dataset/valAGE-Set" and "./dataset/valAGE-Set-Mask". Download the pretrained [checkpoint](https://drive.google.com/file/d/1w4e1gpdInAv7Lj_NQ7EGgmMuInyfUYgi/view?usp=sharing) and put it in the "./checkpoints".
 ```
 cd code
 python test.py -opt options/test_editguard.yml --ckpt ../checkpoints/clean.pth

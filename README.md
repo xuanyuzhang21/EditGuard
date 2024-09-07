@@ -9,6 +9,7 @@ School of Electronic and Computer Engineering, Peking University
 
 [![arXiv](https://img.shields.io/badge/arXiv-<Paper>-<COLOR>.svg)](https://arxiv.org/pdf/2312.08883.pdf)
 [![Home Page](https://img.shields.io/badge/Project_Page-<Website>-blue.svg)](https://xuanyuzhang21.github.io/project/editguard/)
+[![CVPR camera-ready](https://img.shields.io/badge/Camera_Ready-<PDF>-red)](https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_EditGuard_Versatile_Image_Watermarking_for_Tamper_Localization_and_Copyright_Protection_CVPR_2024_paper.pdf)
 
 </div>
 

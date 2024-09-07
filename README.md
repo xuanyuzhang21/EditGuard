@@ -13,7 +13,42 @@ School of Electronic and Computer Engineering, Peking University
 </div>
 
 ## News
-- **_News (2024-02-27)_**: 🎉🎉🎉 Congratulations on EditGuard being accepted by CVPR 2024! Our open-source project is making progress, stay tuned for updates!
+- 🎉🎉🎉 Our code has been released. Our project is still being updated.
+- 🎉🎉🎉 Congratulations on EditGuard being accepted by CVPR 2024! Our open-source project is making progress, stay tuned for updates!
+
+## Installation
+```
+pip install -r requirements.txt
+```
+
+## Online Demo
+```
+cd code
+python app.py
+```
+
+## Testing
+The testing dataset is placed in the "./dataset/valAGE-Set".
+```
+cd code
+python test.py -opt options/test_editguard.yml --ckpt ../checkpoints/clean.pth
+```
+To extract the tampered masks:
+```
+python maskextract.py --threshold 0.2
+```
+
+## Training
+Download the [COCO2017](http://images.cocodataset.org/zips/train2017.zip) dataset and modify the path of the training dataset in the config file.
+
+**Stage 1:** Train the BEM and BRM 
+```
+python train_bit.py -opt options/train_editguard_bit.yml
+```
+**Stage 2:** First modify the checkpoint path of pretrained BEM and BRM in Line 87 "pretrain_model_G: " of "train_editguard_image.yml". Then, please run:
+```
+python train.py -opt options/train_editguard_image.yml
+```
 
 ## Introduction
 
@@ -72,20 +107,13 @@ Our EditGuard can be easily modified and adapted to video tamper localization an
 
 </table>
 
-## Code
-
-Our code is coming soon...
-
-## Contact us
-
-xuanyuzhang21@stu.pku.edu.cn
-
 ## Bibtex
 ```
-@article{zhang2023editguard,
-  author    = {Xuanyu Zhang and Runyi Li and Jiwen Yu and Youmin Xu and Weiqi Li and Jian Zhang},
-  title     = {EditGuard: Versatile Image Watermarking for Tamper Localization and Copyright Protection},
-  journal   = {arXiv preprint arxiv:2312.08883},
-  year      = {2023},
+@inproceedings{zhang2024editguard,
+  title={Editguard: Versatile image watermarking for tamper localization and copyright protection},
+  author={Zhang, Xuanyu and Li, Runyi and Yu, Jiwen and Xu, Youmin and Li, Weiqi and Zhang, Jian},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={11964--11974},
+  year={2024}
 }
 ```

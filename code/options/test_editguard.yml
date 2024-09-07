@@ -1,0 +1,109 @@
+#### general settings
+
+name: test_age-set
+use_tb_logger: true
+model: MIMO-VRN-h
+distortion: sr
+scale: 4
+gpu_ids: [0]
+gop: 1
+num_image: 1
+
+addnoise: False
+noisesigma: 1
+
+addjpeg: False
+jpegfactor: 70
+addpossion: False
+sdinpaint: True
+controlnetinpaint: False
+sdxl: False
+repaint: False
+
+hide: True
+hidebit: True
+degrade_shuffle: True
+prompt: True
+prompt_len: 3
+message_length: 64
+bitrecord: False
+
+mode: image
+
+#### datasets
+
+datasets:
+  TD:
+    num_image: 1
+    name: AGE-Set
+    mode: td
+
+    data_path: ../dataset/valAGE-Set
+    txt_path:  ../dataset/sep_testlist.txt
+
+    N_frames: 1
+    padding: 'new_info'
+    pred_interval: -1
+
+    N_frames: 1
+    padding: 'new_info'
+    pred_interval: -1
+
+
+#### network structures
+
+network_G:
+  which_model_G:
+      subnet_type: DBNet
+  in_nc: 12
+  out_nc: 12
+  block_num: [6, 6]
+  scale: 2
+  init: xavier_group
+  block_num_rbm: 8
+  block_num_trans: 4
+
+
+#### path
+
+path:
+  pretrain_model_G:
+  models: ckp/base
+  strict_load: true
+  resume_state: ~
+
+
+#### training settings: learning rate scheme, loss
+
+train:
+
+  lr_G: !!float 1e-4
+  beta1: 0.9
+  beta2: 0.5
+  niter: 250000
+  warmup_iter: -1  # no warm up
+
+  lr_scheme: MultiStepLR
+  lr_steps: [30000, 60000, 90000, 150000, 180000, 210000]
+  lr_gamma: 0.5
+
+  pixel_criterion_forw: l2
+  pixel_criterion_back: l1
+
+  manual_seed: 10
+
+  val_freq: !!float 1000 #!!float 5e3
+
+  lambda_fit_forw: 64.
+  lambda_rec_back: 1
+  lambda_center: 0
+
+  weight_decay_G: !!float 1e-12
+  gradient_clipping: 10
+
+
+#### logger
+
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 5e3

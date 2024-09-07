@@ -1,0 +1,132 @@
+#### general settings
+
+name: train_ibsn_bit_64
+use_tb_logger: true
+model: MIMO-VRN-h
+distortion: sr
+scale: 4
+gpu_ids: [0, 1]
+gop: 1
+num_image: 1
+
+addnoise: False
+noisesigma: 0.05
+
+addjpeg: False
+jpegfactor: 90
+addpossion: False
+sdinpaint: False
+controlnetinpaint: False
+sdxl: False
+repaint: False
+sdprompt: False
+sdxlprompt: False
+faceswap: False
+
+hide: True
+bithide: True
+degrade_shuffle: True
+prompt: True
+prompt_len: 3
+message_length: 64
+
+losstype: mse
+
+mode: bit
+
+#### datasets
+
+datasets:
+  train:
+    name: Vimeo90K
+    mode: train
+    interval_list: [1]
+    random_reverse: false
+    border_mode: false
+    data_path: /userhome/train2017
+    txt_path: /userhome/train2017.txt
+    dataroot_LQ: ~/vimeo90k/vimeo90k_train_LR7frames.lmdb
+    cache_keys: Vimeo90K_train_keys.pkl
+    num_image: 1
+
+    N_frames: 7
+    use_shuffle: true
+    n_workers: 24 
+    batch_size: 4
+    GT_size: 400
+    LQ_size: 36
+    use_flip: true
+    use_rot: true
+    color: RGB
+
+  val:
+    num_image: 1
+    name: Vid4
+    mode: test
+    data_path: ../dataset/valAGE-Set
+    txt_path: ../dataset/sep_vallist.txt
+
+    N_frames: 1
+    padding: 'new_info'
+    pred_interval: -1
+
+
+#### network structures
+
+network_G:
+  which_model_G:
+      subnet_type: DBNet
+  in_nc: 12
+  out_nc: 12
+  block_num: [6, 6]
+  scale: 2
+  init: xavier_group
+  block_num_rbm: 8
+  block_num_trans: 4
+
+#### path
+
+path:
+  pretrain_model_G:
+  models: ckp/base
+  strict_load: true
+  resume_state: ~
+
+
+#### training settings: learning rate scheme, loss
+
+train:
+
+  lr_G: !!float 1e-4
+  beta1: 0.9
+  beta2: 0.5
+  niter: 250000
+  warmup_iter: -1  # no warm up
+
+  lr_scheme: MultiStepLR
+  lr_steps: [30000, 100000, 250000] 
+  lr_gamma: 0.5
+
+  pixel_criterion_forw: l2
+  pixel_criterion_back: l1
+
+  manual_seed: 10
+
+  val_freq: !!float 500 #!!float 5e3
+
+  lambda_fit_forw: 1.
+  lambda_rec_back: 1
+  lambda_center: 0
+  lambda_msg: !!float 100 # 500000
+
+  progressive: False
+
+  weight_decay_G: !!float 1e-12
+  gradient_clipping: 10
+
+
+#### logger
+
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 500

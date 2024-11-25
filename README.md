@@ -27,9 +27,14 @@ pip install -r requirements.txt
 cd code
 python app.py
 ```
+## Checkpoint
+| Condition | Link |
+|------------|------------|
+| Clean      | [clean.pth](https://drive.google.com/file/d/1w4e1gpdInAv7Lj_NQ7EGgmMuInyfUYgi/view?usp=sharing)|  
+| Support Localization under Gaussian Noise ($\sigma$=0-5), JPEG (Q=70-95), Poission Noise |[degrade.pth](https://drive.google.com/file/d/1fAC2EIrMfPKuQa_DdYdxmUwLBbbsTJXC/view?usp=sharing)| 
 
 ## Testing
-Download the [testing dataset](https://drive.google.com/file/d/1s3HKFOzLokVplXV65Z6xcsBJ9qI91Qfv/view?usp=sharing) and place it in the "./dataset/valAGE-Set" and "./dataset/valAGE-Set-Mask". Download the pre-trained [checkpoint](https://drive.google.com/file/d/1w4e1gpdInAv7Lj_NQ7EGgmMuInyfUYgi/view?usp=sharing) and put it in the "./checkpoints".
+Download the [testing dataset](https://drive.google.com/file/d/1s3HKFOzLokVplXV65Z6xcsBJ9qI91Qfv/view?usp=sharing) and place it in the "./dataset/valAGE-Set" and "./dataset/valAGE-Set-Mask". Download the pre-trained checkpoint and put it in the "./checkpoints".
 ```
 cd code
 python test.py -opt options/test_editguard.yml --ckpt ../checkpoints/clean.pth
@@ -37,6 +42,12 @@ python test.py -opt options/test_editguard.yml --ckpt ../checkpoints/clean.pth
 To extract the tampered masks:
 ```
 python maskextract.py --threshold 0.2
+```
+To test the localization results under degradation conditions, set "degrade_shuffle=True" and download the "degrade.pth".
+```
+cd code
+python test.py -opt options/test_editguard.yml --ckpt ../checkpoints/degrade.pth
+python maskextract.py --threshold 0.4
 ```
 
 ## Training

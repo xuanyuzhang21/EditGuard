@@ -33,6 +33,8 @@ python app.py
 | Clean      | [clean.pth](https://drive.google.com/file/d/1w4e1gpdInAv7Lj_NQ7EGgmMuInyfUYgi/view?usp=sharing)|  
 | Support Localization under Gaussian Noise ($\sigma$=0-5), JPEG (Q=70-95), Poission Noise |[degrade.pth](https://drive.google.com/file/d/1fAC2EIrMfPKuQa_DdYdxmUwLBbbsTJXC/view?usp=sharing)| 
 
+Note that EditGuard is mainly used for tamper localization, and its copyright embedding and extraction are only trained on a few degradations such as Gaussian noise, Jpeg, and Poisson noise. If you want to get better robustness, please add more degradations and retrain it.
+
 ## Testing
 Download the [testing dataset](https://drive.google.com/file/d/1s3HKFOzLokVplXV65Z6xcsBJ9qI91Qfv/view?usp=sharing) and place it in the "./dataset/valAGE-Set" and "./dataset/valAGE-Set-Mask". Download the pre-trained checkpoint and put it in the "./checkpoints".
 ```
@@ -43,7 +45,7 @@ To extract the tampered masks:
 ```
 python maskextract.py --threshold 0.2
 ```
-To test the localization results under degradation conditions, set "degrade_shuffle=True" and download the "degrade.pth".
+To test the localization results under degradation conditions, set the ''degrade_shuffle=True'' in Line 25 of the "options/test_editguard.yml" and download the "degrade.pth".
 ```
 cd code
 python test.py -opt options/test_editguard.yml --ckpt ../checkpoints/degrade.pth

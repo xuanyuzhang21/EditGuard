@@ -30,13 +30,13 @@ python app.py
 ## Checkpoint
 | Condition | Link |
 |------------|------------|
-| Clean      | [clean.pth](https://drive.google.com/file/d/1w4e1gpdInAv7Lj_NQ7EGgmMuInyfUYgi/view?usp=sharing)|  
+| Clean with better fidelity     | [clean.pth](https://drive.google.com/file/d/1w4e1gpdInAv7Lj_NQ7EGgmMuInyfUYgi/view?usp=sharing)|  
 | Support Localization under Gaussian Noise ($\sigma$=0-5), JPEG (Q=70-95), Poission Noise |[degrade.pth](https://drive.google.com/file/d/1fAC2EIrMfPKuQa_DdYdxmUwLBbbsTJXC/view?usp=sharing)| 
 
 Note that EditGuard is mainly used for tamper localization, and its copyright embedding and extraction are only trained on a few degradations such as Gaussian noise, Jpeg, and Poisson noise. If you want to get better robustness, please add more degradations and retrain it.
 
 ## Testing
-Download the [testing dataset](https://drive.google.com/file/d/1s3HKFOzLokVplXV65Z6xcsBJ9qI91Qfv/view?usp=sharing) and place it in the "./dataset/valAGE-Set" and "./dataset/valAGE-Set-Mask". Download the pre-trained checkpoint and put it in the "./checkpoints".
+Download the [testing dataset](https://drive.google.com/file/d/1s3HKFOzLokVplXV65Z6xcsBJ9qI91Qfv/view?usp=sharing) and place it in the "./dataset/valAGE-Set" and "./dataset/valAGE-Set-Mask". Download the pre-trained checkpoint "clean.pth" and put it in the "./checkpoints".
 ```
 cd code
 python test.py -opt options/test_editguard.yml --ckpt ../checkpoints/clean.pth

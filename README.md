@@ -22,11 +22,6 @@ School of Electronic and Computer Engineering, Peking University
 pip install -r requirements.txt
 ```
 
-## Online Demo
-```
-cd code
-python app.py
-```
 ## Checkpoint
 | Condition | Link |
 |------------|------------|

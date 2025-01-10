@@ -98,7 +98,7 @@ class DW_Encoder(nn.Module):
             read_image[index] = self.transform(read).unsqueeze(0).to(image.device)
 
         gap = read_image - forward_image'''
-        gap = forward_image.clamp(-1, 1) - forward_image
+        gap = forward_image.clamp(0, 1) - forward_image
 
         return image + gap
 

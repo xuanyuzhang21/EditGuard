@@ -14,6 +14,7 @@ School of Electronic and Computer Engineering, Peking University
 </div>
 
 ## News
+- 🎉🎉🎉 The Improved version of EditGuard has been accepted by CVPR 2025. Please check [OmniGuard](https://arxiv.org/abs/2412.01615).
 - 🎉🎉🎉 Our code has been released. Our project is still being updated.
 - 🎉🎉🎉 Congratulations on EditGuard being accepted by CVPR 2024! Our open-source project is making progress, stay tuned for updates!
 

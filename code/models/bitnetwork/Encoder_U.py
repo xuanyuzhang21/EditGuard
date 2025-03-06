@@ -2,8 +2,9 @@ from . import *
 
 class DW_Encoder(nn.Module):
 
-    def __init__(self, message_length, blocks=2, channels=64, attention=None):
+    def __init__(self, message_length, blocks=2, channels=64, attention=None, img_size=512):
         super(DW_Encoder, self).__init__()
+        self.img_size = img_size
 
         self.conv1 = ConvBlock(3, 16, blocks=blocks)
         self.down1 = Down(16, 32, blocks=blocks)
@@ -13,7 +14,7 @@ class DW_Encoder(nn.Module):
         self.down4 = Down(128, 256, blocks=blocks)
 
         self.up3 = UP(256, 128)
-        self.linear3 = nn.Linear(message_length, message_length * message_length)
+        self.linear3 = nn.Linear(message_length, img_size // 8 * img_size // 8)
         self.Conv_message3 = ConvBlock(1, channels, blocks=blocks)
         self.att3 = ResBlock(128 * 2 + channels, 128, blocks=blocks, attention=attention)
 
@@ -52,9 +53,7 @@ class DW_Encoder(nn.Module):
 
         u3 = self.up3(d4)
         expanded_message = self.linear3(watermark)
-        expanded_message = expanded_message.view(-1, 1, self.message_length, self.message_length)
-        expanded_message = F.interpolate(expanded_message, size=(d3.shape[2], d3.shape[3]),
-                                                           mode='nearest')
+        expanded_message = expanded_message.view(-1, 1, self.img_size // 8, self.img_size // 8)
         expanded_message = self.Conv_message3(expanded_message)
         u3 = torch.cat((d3, u3, expanded_message), dim=1)
         u3 = self.att3(u3)
